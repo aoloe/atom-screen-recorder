@@ -1,5 +1,17 @@
 # Change Log
 
+## [v1.3.0](https://github.com/lexcast/screen-recorder/tree/v1.3.0)
+
+[Full Changelog](https://github.com/lexcast/screen-recorder/compare/v1.2.3...v1.3.0)
+
+**Closed issues:**
+
+- Linux - selected area doesn't match what gets recorded [\#3](https://github.com/lexcast/screen-recorder/issues/3)
+
+**Merged pull requests:**
+
+- scale all coordinates with the pixel ratio [\#9](https://github.com/lexcast/screen-recorder/pull/9) ([dirk-thomas](https://github.com/dirk-thomas))
+
 ## [v1.2.3](https://github.com/lexcast/screen-recorder/tree/v1.2.3) (2017-03-09)
 [Full Changelog](https://github.com/lexcast/screen-recorder/compare/v1.2.2...v1.2.3)
 
