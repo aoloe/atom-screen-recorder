@@ -2,7 +2,7 @@
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'screen-recorder'
+      'label': 'Screen Recorder'
       'submenu': [
         {
           'label': 'Open select area'
