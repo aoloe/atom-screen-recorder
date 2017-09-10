@@ -20,6 +20,10 @@
           'label': 'Record active pane'
           'command': 'screen-recorder:record-active-pane'
         }
+        {
+          'label': 'Open recording'
+          'command': 'screen-recorder:open-recording'
+        }
       ]
     ]
   }

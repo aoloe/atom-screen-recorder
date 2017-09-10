@@ -52,12 +52,15 @@ module.exports = ScreenRecorder =
       'screen-recorder:record-active-pane': => @recordActivePane()
       'screen-recorder:stop-recording': => @stopRecording()
       'screen-recorder:cancel-recording': => @cancelRecording()
+      'screen-recorder:open-recording': => @openRecordingList()
 
   deactivate: ->
     @modalPanel?.destroy()
     @subscriptions?.dispose()
     @selectAreaView?.destroy()
     @statusView?.destroy()
+    @recordingsList?.dispose()
+    @recordingsList = null
 
   serialize: ->
 
@@ -98,3 +101,10 @@ module.exports = ScreenRecorder =
 
   cancelRecording: ->
     @recorderManager.cancelRecording()
+
+  openRecordingList: ->
+    if not @recordingsList
+      @recordingsList = require "./views/recordings-list-view"
+
+    @recordingsList.init()
+    @recordingsList.toggle()
