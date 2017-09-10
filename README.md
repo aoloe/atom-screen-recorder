@@ -45,6 +45,8 @@ Opens a layer when you can select the area to record
 Stops the current recording and saves it into a gif
 ### Screen Recorder: Cancel Recording
 Stops the current recording and saves nothing
+### Screen Recorder: Open Recording
+Toggles a list panel to select a recording to open
 
 ## Settings
 
