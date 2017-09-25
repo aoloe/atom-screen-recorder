@@ -25,11 +25,12 @@ Install ImageMagick from [here](http://www.imagemagick.org/script/binary-release
 But PR are welcome :smile:
 
 ## Install
-With apm:
+From Atom go to Settings ➔ Install or with the command `Settings View:Install Packages and Themes` and then search for `screen-recorder`
+
+Or with apm:
 ```bash
 apm install screen-recorder
 ```
-Or Settings ➔ Packages ➔ Search for `screen-recorder`
 
 ## Commands
 
