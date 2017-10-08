@@ -1,5 +1,11 @@
 # Change Log
 
+## [v1.5.0](https://github.com/lexcast/screen-recorder/tree/v1.5.0) (2017-10-08)
+[Full Changelog](https://github.com/lexcast/screen-recorder/compare/v1.4.0...v1.5.0)
+
+- Add settings for executables paths.
+- Add old releases to CHANGELOG.
+
 ## [v1.4.0](https://github.com/lexcast/screen-recorder/tree/v1.4.0) (2017-09-10)
 [Full Changelog](https://github.com/lexcast/screen-recorder/compare/v1.3.0...v1.4.0)
 
