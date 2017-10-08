@@ -7,6 +7,14 @@ fs = require 'fs-plus'
 
 module.exports = ScreenRecorder =
   config:
+    ffmpegPath:
+      type: 'string'
+      default: ''
+      description: 'Path of the Ffmpeg executable.'
+    imagemagickPath:
+      type: 'string'
+      default: ''
+      description: 'Path of the ImageMagick executable.'
     targetDirectory:
       type: 'string'
       default: path.join fs.getHomeDirectory(), 'atomrecordings'

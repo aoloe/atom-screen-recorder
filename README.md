@@ -51,6 +51,12 @@ Toggles a list panel to select a recording to open
 
 ## Settings
 
+### Ffmpeg Path
+Path of the Ffmpeg executable
+
+### ImageMagick Path
+Path of the ImageMagick executable
+
 ### Target Directory
 Directory where screen recordings will be saved
 

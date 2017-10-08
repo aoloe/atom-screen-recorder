@@ -24,11 +24,12 @@ class RecorderManager
     @statusView = statusView
 
   startRecording: (x, y, w, h) ->
+    @setBinariesPaths()
     if isRecording
       atom.notifications.addWarning "There is already a recording active"
     else
       @setPaths()
-      @fps = atom.config.get 'screen-recorder.framesPerSecond'
+      @fps = @getConfig 'framesPerSecond'
       @ffmpegCmd = ffmpeg()
         .addOptions [
           '-pix_fmt rgb24'
@@ -66,7 +67,7 @@ class RecorderManager
         @tmpFilesRead
       ]
 
-      if atom.config.get 'screen-recorder.reduceOutput'
+      if @getConfig 'reduceOutput'
         imParams.push '-layers', 'Optimize'
 
       imParams.push @filePath
@@ -99,9 +100,21 @@ class RecorderManager
     isRecording
 
   setPaths: ->
-    dir = atom.config.get 'screen-recorder.targetDirectory'
+    dir = @getConfig 'targetDirectory'
     @tmpDir = path.join dir, 'tmp'
     fs.makeTreeSync @tmpDir if not fs.isDirectorySync @tmpDir
     @filePath = path.join dir, Date.now() + '.gif'
     @tmpFilesSave = path.join @tmpDir, 'ffout%03d.png'
     @tmpFilesRead = path.join @tmpDir, 'ffout*.png'
+
+  setBinariesPaths: ->
+    ffmpegPath = @getConfig 'ffmpegPath'
+    ffmpegPath = 'ffmpeg' if not ffmpegPath
+    ffmpeg.setFfmpegPath ffmpegPath
+
+    imagemagickPath = @getConfig 'imagemagickPath'
+    imagemagickPath = 'convert' if not imagemagickPath
+    im.path = imagemagickPath
+
+  getConfig: (key) ->
+    atom.config.get "screen-recorder.#{key}"
