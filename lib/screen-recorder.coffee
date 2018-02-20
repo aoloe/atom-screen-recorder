@@ -58,6 +58,7 @@ module.exports = ScreenRecorder =
       'screen-recorder:record-window': => @recordWindow()
       'screen-recorder:record-tree-view': => @recordTreeView()
       'screen-recorder:record-active-pane': => @recordActivePane()
+      'screen-recorder:record-active-texteditor': => @recordActiveTexteditor()
       'screen-recorder:stop-recording': => @stopRecording()
       'screen-recorder:cancel-recording': => @cancelRecording()
       'screen-recorder:open-recording': => @openRecordingList()
@@ -101,6 +102,13 @@ module.exports = ScreenRecorder =
     pane = atom.workspace.getActivePane()
     paneElement = atom.views.getView(pane)
     r = paneElement.getBoundingClientRect()
+    @recorderManager
+      .startRecording r.left, r.top,  r.right - r.left, r.bottom - r.top
+
+  recordActiveTexteditor: ->
+    texteditor = atom.workspace.getActiveTextEditor()
+    texteditorElement = atom.views.getView(texteditor)
+    r = texteditorElement.getBoundingClientRect()
     @recorderManager
       .startRecording r.left, r.top,  r.right - r.left, r.bottom - r.top
 

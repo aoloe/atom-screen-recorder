@@ -15,6 +15,7 @@
       "screen-recorder:record-window",
       "screen-recorder:record-tree-view",
       "screen-recorder:record-active-pane",
+      "screen-recorder:record-active-texteditor",
       "screen-recorder:open-recording"
     ]
   },

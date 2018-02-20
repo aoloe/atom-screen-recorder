@@ -40,6 +40,8 @@ Records the entire atom workspace
 Records the tree view
 ### Screen Recorder: Record Active Pane
 Records the current active pane
+### Screen Recorder: Record Active Text Editor
+Records the current active text editing area
 ### Screen Recorder: Open Select Area
 Opens a layer when you can select the area to record
 ### Screen Recorder: Stop Recording

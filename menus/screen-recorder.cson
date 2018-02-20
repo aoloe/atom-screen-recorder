@@ -21,6 +21,10 @@
           'command': 'screen-recorder:record-active-pane'
         }
         {
+          'label': 'Record active text area'
+          'command': 'screen-recorder:record-active-texteditor'
+        }
+        {
           'label': 'Open recording'
           'command': 'screen-recorder:open-recording'
         }
