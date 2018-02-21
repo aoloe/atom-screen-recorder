@@ -124,3 +124,8 @@ module.exports = ScreenRecorder =
 
     @recordingsList.init()
     @recordingsList.toggle()
+
+  provideScreenRecorder: ->
+    console.log('the screen-recorder provider has been called')
+    recordActiveTexteditor: @recordActiveTexteditor.bind(@recorderManager)
+    stopRecording: @stopRecording.bind(@recorderManager)
